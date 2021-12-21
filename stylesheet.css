@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Hammersmith One", sans-serif;
+  overflow-x: hidden;
+}
+
+/*style container*/
+.container {
+  background-color: rgb(219, 219, 219);
+  display: flex;
+  flex-direction: column;
+  width: 25em;
+  height: 25em;
+  margin: 0 auto;
+  border-radius: 15px 15px 15px 15px;
+}
+
+/*style header*/
+.header {
+  background-color: turquoise;
+  display: flex;
+  flex-direction: column;
+  height: 8em;
+  text-align: center;
+  justify-content: center;
+  border-radius: 15px 15px 0 0;
+}
+.header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.header h2 {
+  margin: 5px;
+}
+.header-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+.header-input input {
+  border-style: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+  margin: 0 5px;
+}
+.header-input button {
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  position: absolute;
+  right: 4rem;
+}
+
+/*style content*/
+.content {
+  height: 17em;
+  overflow: auto;
+  border-radius: 0 0 15px 15px;
+}
+.content ul {
+  background-color: #f9f9f9;
+  height: 17em;
+  list-style-type: none;
+}
+.content ul li {
+  background-color: #eee;
+  height: 4.25em;
+  line-height: 4.25em;
+  padding: 0 4em;
+  position: relative;
+}
+
+.content ul li:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/*HOVER AND CLICK*/
+.content ul li:hover {
+  background-color: #ddd;
+}
+.content ul li:nth-child(odd):hover {
+  background-color: #ddd;
+}
+
+/*style close button*/
+.close {
+  position: absolute;
+  right: 0;
+  height: 4.25rem;
+  width: 4.25rem;
+  font-size: 2em;
+  text-align: center;
+}
+.close:hover {
+  background-color: rgba(204, 100, 93, 0.8);
+  color: #fff;
+}
+
+/*style check sign*/
+.content ul li.checked {
+  background-color: #888;
+  text-decoration: line-through;
+}
+.content ul li.checked:nth-child(odd) {
+  background-color: #888;
+  text-decoration: line-through;
+}
+.content ul li.checked::before {
+  content: "";
+  position: absolute;
+  left: 1.5rem;
+  top: 0.7rem;
+  height: 2rem;
+  width: 0.75rem;
+  border-style: solid;
+  border-width: 0 2.5px 2.5px 0;
+  border-color: #fff;
+  border-radius: 0 0 5px 0;
+  transform: rotate(45deg);
+}
+
+/*style notification*/
+.notification {
+  background-color: transparent;
+  height: 2rem;
+  width: 30rem;
+  margin: 1rem auto 0.5rem auto;
+  position: relative;
+}
+.add {
+  background-color: #23b643;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  height: 2rem;
+  width: 15rem;
+  transition: opacity 0.5s;
+  opacity: 0;
+  text-align: center;
+  color: white;
+  line-height: 2rem;
+  border-radius: 15px;
+}
+.remove {
+  background-color: tomato;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  height: 2rem;
+  width: 15rem;
+  transition: opacity 0.5s;
+  opacity: 0;
+  text-align: center;
+  color: white;
+  line-height: 2rem;
+  border-radius: 15px;
+}

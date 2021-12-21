@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="notification">
+      <div class="add">You added a new item</div>
+      <div class="remove">You deleted an item</div>
+    </div>
+    <div class="container">
+      <div class="header">
+        <h2>My To Do List</h2>
+        <div class="header-input">
+          <input
+            type="text"
+            id="user-input"
+            name="user-input"
+            placeholder=" Title..."
+          />
+          <button type="button" onclick="createListItem()" id="addButton">
+            Add
+          </button>
+        </div>
+      </div>
+      <div class="content">
+        <ul id="my-ul">
+          <li class="defaultObject">List item</li>
+          <li class="defaultObject">List item</li>
+          <li class="defaultObject">List item</li>
+          <li class="defaultObject">List item</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
